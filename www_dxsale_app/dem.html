@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Day/Night Mode</title>
+
+
+</head>
+
+<style>
+    #myDiv {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        color: aliceblue;
+        pointer-events: none;
+        user-select: none;
+    }
+</style>
+
+<body>
+    <div id="myDiv">12312321</div>
+    <div id="myDiv">12312321</div>
+    <div id="myDiv">12312321</div>
+</body>
+<script>
+    const myDivs = document.querySelectorAll('#myDiv');
+    // 锁定样式对象
+    Object.freeze(myDiv.style);
+
+    myDivs.forEach(function(element) {
+        element.style.background = 'blue';
+        element.style.color = 'red';
+    });
+</script>
+
+</html>
